@@ -50,5 +50,11 @@ export class cdkStack extends Stack {
       }
     });
 
+    userPool.addDomain("CognitoDomain", {
+      cognitoDomain: {
+        domainPrefix: `${appName}-${environ}`,
+      },
+    });
+
   }
 }
